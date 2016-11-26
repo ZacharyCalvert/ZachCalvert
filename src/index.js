@@ -4,7 +4,7 @@ import App from './App';
 
 var $ = require('jquery');
 window.$ = $;
-var bootstrap = require('bootstrap');
+require('bootstrap');
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';

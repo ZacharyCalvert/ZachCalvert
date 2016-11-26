@@ -4,6 +4,12 @@ import React, { Component } from 'react';
 
 
 class Nav extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { selectedPage: "HOME" };
+  }
+
   render() {
     return (
       <nav className="navbar navbar-default navbar-fixed-top">
@@ -15,14 +21,15 @@ class Nav extends Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#">Zach Calvert</a>
+            <a className="navbar-brand" onClick={() => this.setState({selectedPage: 'HOME'})} href="#">Zach Calvert</a>
           </div>
 
           <div id="navbar" className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
-              <li><a href="#">Resume</a></li>
-              <li><a href="#">Social</a></li>
-              <li className="active"><a href="#">Recruiters</a></li>
+              <li className={this.state.selectedPage === "HOME" ? 'active' : 'deactive'} onClick={() => this.setState({selectedPage: 'HOME'})} ><a href="#home">Home</a></li>
+              <li className={this.state.selectedPage === "RESUME" ? 'active' : 'deactive'} onClick={() => this.setState({selectedPage: 'RESUME'})} ><a href="#resume">Resume</a></li>
+              <li className={this.state.selectedPage === "SOCIAL" ? 'active' : 'deactive'} onClick={() => this.setState({selectedPage: 'SOCIAL'})} ><a href="#social">Social</a></li>
+              <li className={this.state.selectedPage === "RECRUITERS" ? 'active' : 'deactive'} onClick={() => this.setState({selectedPage: 'RECRUITERS'})} ><a href="#recruiters">Recruiters</a></li>
             </ul>
           </div>
         </div>

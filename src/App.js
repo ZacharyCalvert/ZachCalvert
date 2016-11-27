@@ -36,11 +36,11 @@ class App extends Component {
           {toRender}
 
           <hr/>
+        </div>
           <footer className="text-center">
             <p>&copy; 2016 Zach Calvert</p>
             <p><a href="https://opensource.org/licenses/MIT">MIT License</a></p>
           </footer>
-        </div>
       </div>
     );
   }

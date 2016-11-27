@@ -24,7 +24,7 @@ class Nav extends Component {
             <a className="navbar-brand" onClick={() => this.setState({selectedPage: 'HOME'})} href="#">Zach Calvert</a>
           </div>
 
-          <div id="navbar" className="navbar-collapse collapse">
+          <div id="navbar" className="navbar-collapse collapse navbar-right">
             <ul className="nav navbar-nav">
               <li className={this.state.selectedPage === "HOME" ? 'active' : 'deactive'} onClick={() => this.setState({selectedPage: 'HOME'})} ><a href="#home">Home</a></li>
               <li className={this.state.selectedPage === "RESUME" ? 'active' : 'deactive'} onClick={() => this.setState({selectedPage: 'RESUME'})} ><a href="#resume">Resume</a></li>

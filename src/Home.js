@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AboutMe from './AboutMe';
 
 class Home extends Component {
 
@@ -6,7 +7,7 @@ class Home extends Component {
     return (
     	<div className="row">
 
-    		<div className="col-sm-8">
+    		<div className="col-sm-8 col-xs-12">
     			<p>
     			Hello and nice to meet you.  I'm a full-time senior software engineer living in Fort Worth, TX.
     			I have served roles in back-end developent, DevOps, technical leadership, front-end, quality 
@@ -34,15 +35,7 @@ class Home extends Component {
 	            </p>
       		</div>
 
-			<div className="col-sm-3 col-sm-offset-1 sidebar">
-	          <div className="sidebar-module sidebar-module-inset">
-	            <h4>About Me</h4>
-	            <p>
-	            I'm a senior software engineer in Fort Worth, TX currently working on automotive telematics 
-	            systems (ATS) for <a href="http://www.spireon.com/">Spireon, Inc.</a>
-	            </p>
-	          </div>
-	        </div>
+			<AboutMe/>
         </div>
 
     );

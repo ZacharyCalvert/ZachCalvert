@@ -4,7 +4,9 @@ class Social extends Component {
 
   render() {
     return (
-      <p>Hello to social</p>
+      <div className="container">
+      	<p>Hello to social</p>
+      </div>
     );
   }
 }

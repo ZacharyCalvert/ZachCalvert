@@ -31,12 +31,9 @@ class App extends Component {
     return (
       <div>
         <Nav pageChanged={this.handleActionChange} selectedPage={this.state.selectedPage} />
-
-        <div className="container">
           {toRender}
-
+        
           <hr/>
-        </div>
           <footer className="text-center">
             <p>&copy; 2016 Zach Calvert</p>
             <p><a href="https://opensource.org/licenses/MIT">MIT License</a></p>

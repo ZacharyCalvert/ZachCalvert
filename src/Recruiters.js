@@ -4,7 +4,10 @@ class Recruiters extends Component {
 
   render() {
     return (
-      <p>Hello to Recruiters</p>
+
+      <div className="container">
+      	<p>Hello to Recruiters</p>
+      </div>
     );
   }
 }

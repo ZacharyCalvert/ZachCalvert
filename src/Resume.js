@@ -1,23 +1,58 @@
 import React, { Component } from 'react';
-import AboutMe from './AboutMe';
+import ResumeContent from './ResumeContent';
+import ResumeDownloads from './ResumeDownloads';
+import ResumeRoles from './ResumeRoles';
+import ResumeSkills from './ResumeSkills';
+import SubNav from './SubNav';
+
+var subNavEntries = [
+  {
+    page: 'resume-bio',
+    text: 'Bio', 
+    href: '#resume-bio'
+  },
+  {
+    page: 'resume-downloads',
+    text: 'Downloads',
+    href: '#resume-downloads'
+  },
+  {
+    page: 'resume-skills',
+    text: 'Skills',
+    href: '#resume-skills'
+  },
+  {
+    page: 'resume-roles',
+    text: 'Roles',
+    href: '#resume-roles'
+  }
+];
 
 class Resume extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = { selectedSubNav: "resume-bio" };
+    this.handleActionChange = this.handleActionChange.bind(this);
+  }
+
+  handleActionChange(updatedSelectedPage) {
+    this.setState({selectedSubNav: updatedSelectedPage});
+  }
+
   render() {
+
+    var selection = this.state.selectedSubNav;
+    var toRender = (selection === "resume-roles" ? <ResumeRoles/>:
+      selection === "resume-downloads" ? <ResumeDownloads/> :
+      selection === "resume-skills" ? <ResumeSkills/> :
+      <ResumeContent/> );
+
     return (
-      
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-xs-12 center-block">
-          Downloads:
-            <ul className="list-inline">
-            <li className="px-2"><a href="./resume/ZachCalvert_2pg.pdf" download="ZachCalvert.pdf">2pg-pdf</a></li>
-            <li><a href="./resume/ZachCalvert_4pg.pdf"  download="ZachCalvert.pdf">4pg-pdf</a></li>
-            <li><a href="./resume/ZachCalvert_2pg.docx"  download="ZachCalvert.docx">2pg-docx</a></li>
-            <li><a href="./resume/ZachCalvert_4pg.docx"  download="ZachCalvert.docx">4pg-docx</a></li>
-            </ul>
-          </div>
-        </div>
+
+      <div>
+        <SubNav entries={subNavEntries} pageChanged={this.handleActionChange} selectedSubNav={this.state.selectedSubNav} />
+        {toRender}
       </div>
     );
   }

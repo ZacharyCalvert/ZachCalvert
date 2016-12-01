@@ -23,7 +23,7 @@ class Nav extends Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" onClick={() => this.props.updateSelection('HOME')} href="#">Zach Calvert</a>
+            <a className="navbar-brand" onClick={() => this.props.updateSelection('HOME')} href="#home">Zach Calvert</a>
           </div>
 
           <div id="navbar" className="navbar-collapse collapse navbar-right">

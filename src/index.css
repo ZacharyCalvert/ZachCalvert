@@ -1,6 +1,10 @@
 body {
-  padding-top: 60px;
+  padding-top: 50px;
   padding-bottom: 20px;
+}
+
+.row {
+  adding-top: 10px;
 }
 
 .center-block {
@@ -8,4 +12,15 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align:center;
+}
+
+.container .sub-nav {
+  padding-top: -20px;
+  width: 100%;
+  text-align: center;
+}
+
+.container .sub-nav li {
+  float: none;
+  display: inline-block;
 }

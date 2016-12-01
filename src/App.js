@@ -37,6 +37,7 @@ class App extends Component {
           <footer className="text-center">
             <p>&copy; 2016 Zach Calvert</p>
             <p><a href="https://opensource.org/licenses/MIT">MIT License</a></p>
+            <p><a href="https://commons.wikimedia.org/w/index.php?curid=1453293">Page favicon.ico</a></p>
           </footer>
       </div>
     );

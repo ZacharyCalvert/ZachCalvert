@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './subnav.css';
 
 class SubNav extends Component {
 
@@ -38,29 +39,15 @@ props:
 
     return (
 
-      <nav className="navbar navbar-default">
-        <div className="container sub-nav">
-          <div className="navbar-header sub-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#sub-navbar" aria-expanded="false" aria-controls="navbar">
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
-          </div>
-
-          <div id="sub-navbar" className="navbar-collapse collapse navbar-right sub-nav">
-            <ul className="nav navbar-nav sub-nav">
-
-              {this.props.entries.map(function(object, i) {
-                var clickedPage = object.page;
-                return <li key={i} className={activePage === object.page ? 'active' : 'deactive'} onClick={() => pageUpdate(clickedPage)} ><a href={object.href}>{object.text}</a></li>
-              })}
+      <div className="container-fluid sub-nav">
+        <ul id="sub-nav" className="sub-nav">
+          {this.props.entries.map(function(object, i) {
+            var clickedPage = object.page;
+            return <li key={i} className={activePage === object.page ? 'active' : 'deactive'} onClick={() => pageUpdate(clickedPage)} ><a href={object.href}>{object.text}</a></li>
+          })}
             
-            </ul>
-          </div>
-        </div>
-      </nav>
+        </ul>
+      </div>
     );
   }
 }

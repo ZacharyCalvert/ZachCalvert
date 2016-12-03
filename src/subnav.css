@@ -25,6 +25,7 @@ ul.sub-nav {
 }
 
 div .sub-nav > li {
+	text-transform: uppercase;
 	text-align: center;
 	padding: 5px 10px;
 }

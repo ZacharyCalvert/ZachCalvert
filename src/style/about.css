@@ -1,0 +1,23 @@
+.about-me-links > li {
+	list-style: none;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	font-size: 1.1rem;
+}
+
+ul.about-me-links {
+	margin: 0;
+	padding: 0;
+}
+
+#about a {
+	color: #A8651E;
+}
+
+#about {
+    border-radius: 25px;
+    border: 3px dotted #886611;
+    background-color: #CEAC41;
+    padding: 10px;
+}

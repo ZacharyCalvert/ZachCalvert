@@ -3,7 +3,6 @@ import Nav from './Navbar';
 import Home from './Home';
 import Resume from './Resume';
 import Recruiters from './Recruiters'
-import Social from './Social'
 
 
 class App extends Component {
@@ -23,7 +22,6 @@ class App extends Component {
 
     var selection = this.state.selectedPage;
     var toRender = (selection === "RESUME" ? <Resume/> :
-      selection === "SOCIAL" ? <Social/> :
       selection === "RECRUITERS" ? <Recruiters/> :
       <Home/>);
 

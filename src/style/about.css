@@ -12,12 +12,12 @@ ul.about-me-links {
 }
 
 #about a {
-	color: #A8651E;
+	color: #0B9653;
 }
 
 #about {
     border-radius: 25px;
-    border: 3px dotted #886611;
-    background-color: #CEAC41;
+    border: 2px dotted #084B2B;
     padding: 10px;
+	color: #05100B;
 }

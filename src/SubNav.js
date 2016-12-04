@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './subnav.css';
+import './style/subnav.css';
 
 class SubNav extends Component {
 

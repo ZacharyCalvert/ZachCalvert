@@ -15,26 +15,3 @@ body {
   margin-right: auto;
   text-align:center;
 }
-
-.container .sub-nav {
-  padding-top: -20px;
-  width: 100%;
-  text-align: center;
-}
-
-.resume-button {
-  margin-bottom: 30px;
-  text-align:center;
-  border-radius: 27px;
-  background: #e6b800;
-  cursor: pointer;
-  height: 100px;
-  padding: 25px;
-  box-shadow: 10px 10px 5px #888888;
-  white-space: nowrap;
-}
-
-.resume-button:hover {
-  box-shadow: 3px 3px 5px #888888;
-  background: #D39747;
-}

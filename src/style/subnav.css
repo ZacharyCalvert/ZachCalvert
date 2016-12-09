@@ -11,6 +11,12 @@
 	background: #B9DC86;
 }
 
+.container .sub-nav {
+  padding-top: -20px;
+  width: 100%;
+  text-align: center;
+}
+
 div.sub-nav {
 	background: #B9DC86;
 }

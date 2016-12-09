@@ -4,6 +4,7 @@ import ResumeDownloads from './ResumeDownloads';
 import ResumeRoles from './ResumeRoles';
 import ResumeSkills from './ResumeSkills';
 import SubNav from './SubNav';
+import './style/resume.css';
 
 var subNavEntries = [
   {

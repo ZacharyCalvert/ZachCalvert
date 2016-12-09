@@ -9,7 +9,7 @@ class AboutMe extends Component {
         <div className="col-sm-3 col-sm-offset-1 hidden-xs sidebar">
           <div id="about" className="sidebar-module sidebar-module-inset">
             <h4>About Me</h4>
-            <img className="about" src="./img/CroppedCircle.jpg"></img>
+            <img role="presentation" className="about" src="./img/CroppedCircle.jpg"></img>
             <p className="about">
             I'm a senior software engineer in Fort Worth, TX currently working on automotive telematics 
             systems (ATS) for <a href="http://www.spireon.com/">Spireon, Inc.</a>

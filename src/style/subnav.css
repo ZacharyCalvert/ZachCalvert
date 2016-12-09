@@ -8,11 +8,11 @@
 	padding: 0;
 	margin: 0;
 	min-height: 0;
-	background: #ffd11a;
+	background: #B9DC86;
 }
 
 div.sub-nav {
-	background: #ffd11a;
+	background: #B9DC86;
 }
 
 ul.sub-nav {
@@ -31,5 +31,9 @@ div .sub-nav > li {
 }
 
 .sub-nav li.active {
-	background: #cca300;
+	background: #8DB752;
+}
+
+.sub-nav li.active a {
+	color: #ffffff;
 }

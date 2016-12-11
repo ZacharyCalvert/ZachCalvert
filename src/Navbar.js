@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import './style/nav.css';
+
+require('./style/nav.css');
 
 class Nav extends Component {
 
@@ -14,7 +17,7 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
+      <nav className="navbar navbar-fixed-top navbar-custom">
         <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

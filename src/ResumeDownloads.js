@@ -20,14 +20,14 @@ class ResumeDownloads extends Component {
                 PDF
               </div>
               <div id="docx" onClick={this.downloadClick.bind(this)} className="col-sm-4 col-sm-offset-2 col-xs-offset-1 col-xs-5 resume-button"> 
-                MSDOC
+                DOC
               </div>
               
             </div>
             <AboutMe/>
           </div>
-          <a className="resume" download="ZachCalvert" href="./resume/ZachCalvert.pdf" id="pdf_download">PDF Link</a>
-          <a className="resume" download="ZachCalvert" href="./resume/ZachCalvert.docx" id="docx_download">MSDOC Link</a>
+          <a className="resume-download" download="ZachCalvert" href="./resume/ZachCalvert.pdf" id="pdf_download">PDF Link</a>
+          <a className="resume-download" download="ZachCalvert" href="./resume/ZachCalvert.docx" id="docx_download">MSDOC Link</a>
         </div>
     );
   }

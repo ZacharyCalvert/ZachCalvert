@@ -17,6 +17,54 @@
   background: #B9DC86;
 }
 
-a.resume {
+a.resume-download {
   display: none;
+}
+
+.resume * {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.resume h1 {
+  text-align: center;
+  font-size: 1.9em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.resume h2 {
+  margin-top: 8px;
+  font-size: 1.5em;
+}
+
+.resume h3 {
+  font-size: 1.1em;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.resume h4 {
+  font-size: 1.1em;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.resume h5 {
+  margin-left: 20px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+.resume p {
+  margin-left: 20px;
+}
+
+.position {
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 10px;
+
 }

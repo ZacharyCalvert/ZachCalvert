@@ -34,6 +34,15 @@ div .sub-nav > li {
 	text-transform: uppercase;
 	text-align: center;
 	padding: 5px 10px;
+ 	cursor: pointer;
+}
+
+.sub-nav > li a:hover {
+	text-decoration: none;
+}
+
+.sub-nav > li a:focus {
+	text-decoration: none;
 }
 
 .sub-nav li.active {

@@ -11,7 +11,7 @@ class Home extends Component {
 
 	    		<div className="col-sm-8 col-xs-12">
 	    			<p>
-	    			Hello and nice to meet you.  I'm a full-time senior software engineer living in Fort Worth, TX.
+	    			I'm a full-time senior software engineer living in Fort Worth, TX.
 	    			I have served roles in back-end developent, DevOps, technical leadership, front-end, quality 
 	    			assurance, performance testing, and automation engineering.  I have proven to be versatile and 
 	    			willing to tackle my team's needs as they arise. 

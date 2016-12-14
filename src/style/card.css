@@ -1,0 +1,30 @@
+
+div.cards{ 
+	padding: 0;
+}
+
+.card {
+    border-radius: 25px;
+  	box-shadow: 3px 3px 5px #888888;
+	color: #05100B;
+  	background: #B9DC86;
+	padding: 0px;
+	margin: 0px;
+}
+
+.card hr {
+	padding: 0px;
+	margin: 0px;
+}
+
+.card h1 {
+	text-transform: uppercase;
+	width: auto;
+	text-align: center;
+  	font-size: 1.2em;
+  	margin: 5px;
+}
+
+.card p {
+	margin-top: 6px;
+}

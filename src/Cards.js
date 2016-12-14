@@ -17,7 +17,7 @@ class Cards extends Component {
 					{this.props.cards.map(function(object, i) {
 	            		var title = object.title;
 	            		var text = object.text;
-	            		return <Card title={title} text={text} />
+	            		return <Card key={i} title={title} text={text} />
 	          		})}
           		</div>
       			

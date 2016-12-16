@@ -16,7 +16,7 @@ class ResumeContent extends Component {
 	    				Skilled Software Engineer with 12 years industry experience focused in full-stack development using primarily Java technologies. Professional experience in Agile methodologies, Continuous Integration, RESTful services, Atlassian utilities, unit testing, performance testing, Linux server diagnostics, cloud server virtualization, and requirement analysis.
 	    			</p>
 	    			<h2>Proficiencies</h2>
-	    			<h4>Java - 11 years</h4>
+	    			<h4>Java - 12 years</h4>
 	    			<p>
 							Spring, Spring Boot, Ehcache, Hibernate, OSGi, JUnit, CXF, JDBC, ServiceMix, Maven, JMockit, Camel, Groovy, Gradle, Spock 
 	    			</p>

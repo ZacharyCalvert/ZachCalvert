@@ -39,13 +39,22 @@ class Card extends Component {
       );
   }
 
+  getBootstrapWidthClasses() {
+    var showFullCard = this.state.opened;
+    if (showFullCard) {
+      return "col-md-12 col-sm-12 col-xs-12 card-wrapper";
+    } else {
+      return "col-md-3 col-sm-4 col-xs-6 card-wrapper";
+    }
+  }
+
 
   render() {
 
     var showFullCard = this.state.opened;
 
     return (
-      <div className="col-md-3 col-sm-4 col-xs-6 card-wrapper">
+      <div className={this.getBootstrapWidthClasses()}>
         {
           showFullCard ?
           this.fullCard()

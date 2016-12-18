@@ -39,8 +39,27 @@ class Card extends Component {
       );
   }
 
+  profileCard() {
+
+    var props = this.props;
+    return (
+        <div className="card profile" onClick={this.clicked}>
+          <h4>{props.name}</h4>
+          <hr></hr>
+          <h5>{props.company}</h5>
+          <h5>{props.title}</h5>
+          <a target="_blank" href={props.linkedIn}>LinkedIn</a>
+          <p>
+            {props.text}
+          </p>
+
+        </div>
+      );
+  }
+
   getBootstrapWidthClasses() {
     var showFullCard = this.state.opened;
+
     if (showFullCard) {
       return "col-md-12 col-sm-12 col-xs-12 card-wrapper";
     } else {
@@ -53,16 +72,26 @@ class Card extends Component {
 
     var showFullCard = this.state.opened;
 
-    return (
-      <div className={this.getBootstrapWidthClasses()}>
-        {
-          showFullCard ?
-          this.fullCard()
-          : 
-          this.emptyCard()
-        }
-      </div>
-    );
+    var type = this.props.type;
+
+    if (type === 'profile') {
+      return ( 
+        <div className="col-md-12 col-sm-12 col-xs-12 card-wrapper">
+          {this.profileCard()}
+        </div>
+      )
+    } else {
+      return (
+        <div className={this.getBootstrapWidthClasses()}>
+          {
+            showFullCard ?
+            this.fullCard()
+            : 
+            this.emptyCard()
+          }
+        </div>
+      );
+    }
   }
 }
 

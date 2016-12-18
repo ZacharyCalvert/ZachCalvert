@@ -17,7 +17,12 @@ class Cards extends Component {
 					{this.props.cards.map(function(object, i) {
 	            		var title = object.title;
 	            		var text = object.text;
-	            		return <Card key={i} title={title} text={text} />
+                  var type = object.type;
+                  var name = object.name;
+                  var company = object.company;
+                  var linkedIn = object.linkedIn;
+
+	            		return <Card key={i} type={type} name={name} company={company} linkedIn={linkedIn} title={title} text={text} />
 	          		})}
           		</div>
       			

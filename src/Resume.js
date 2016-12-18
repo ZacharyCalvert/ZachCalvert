@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ResumeContent from './ResumeContent';
 import ResumeDownloads from './ResumeDownloads';
 import ResumeSkills from './ResumeSkills';
+import ResumeReferences from './ResumeReferences';
 import SubNav from './SubNav';
 import './style/resume.css';
 
@@ -13,8 +14,13 @@ var subNavEntries = [
   },
   {
     page: 'resume-downloads',
-    text: 'Downloads',
+    text: 'Download',
     href: '#resume-downloads'
+  },
+  {
+    page: 'resume-references',
+    text: 'References',
+    href: '#resume-references'
   },
   {
     page: 'resume-skills',
@@ -39,6 +45,7 @@ class Resume extends Component {
 
     var selection = this.state.selectedSubNav;
     var toRender = (selection === "resume-downloads" ? <ResumeDownloads/> :
+      selection === "resume-references" ? <ResumeReferences/> :
       selection === "resume-skills" ? <ResumeSkills/> :
       <ResumeContent/> );
 

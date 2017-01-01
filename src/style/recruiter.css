@@ -1,0 +1,19 @@
+
+table.recruiter-questions, .recruiter-questions td {
+	border: 1px solid black;
+	padding: 2px 5px 2px 5px;
+	background-color: #b0cc94;
+	text-align: right;
+}
+
+.recruiter-questions td {
+	min-width: 130px;
+}
+
+td.recruiter-answer {
+	text-align: justify;
+}
+
+tr.alternate td {
+	background-color: #caeaae;
+}

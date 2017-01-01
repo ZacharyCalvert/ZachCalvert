@@ -33,7 +33,7 @@ class App extends Component {
         
           <hr/>
           <footer className="text-center">
-            <p>&copy; 2016 Zach Calvert</p>
+            <p>&copy; 2017 Zach Calvert</p>
             <p><a href="https://opensource.org/licenses/MIT">MIT License</a>.  Credit for Creative Commons favicon <a href="https://commons.wikimedia.org/w/index.php?curid=1453293">here</a></p>
           </footer>
       </div>

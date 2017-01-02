@@ -41,7 +41,7 @@ class RecruiterQuestions extends Component {
     	<table className="recruiter-questions">
         <tbody>
           {questions.map(function(entry, index) {
-            var cssClassName = (index % 2 == 0) ? 'alternate' : 'normal';
+            var cssClassName = (index % 2 === 0) ? 'alternate' : 'normal';
             return <tr className={cssClassName} key={index}><td>{entry.question}</td><td className="recruiter-answer">{entry.answer}</td></tr>;
           })}
         </tbody>

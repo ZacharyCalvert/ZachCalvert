@@ -4,6 +4,10 @@ import './style/recruiter.css';
 var questions = [
 
   {
+    question: "Where are you located?",
+    answer: "I live in northeast Fort Worth near North Richland Hills in the 76118 zip code.  For my commute, portions of Dallas are more accessible than southwest Fort Worth.  Please see my commute page for my commute range."
+  },
+  {
     question: "Are you willing to relocate?",
     answer: "I have grown roots in the Dallas/Fort Worth metroplex and will not move my family.  I am not interested in opportunities that involve relocation at this time."
   },
@@ -25,7 +29,7 @@ var questions = [
   },
   {
     question:"What job title's interest you?",
-    answer:"Software Architect, Principal Architect, or Technical Lead."
+    answer:"Software Architect, Principal Architect, DevOps Engineer, or Technical Lead."
   },
   {
     question: "Could you describe your ideal job?", 

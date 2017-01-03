@@ -7,9 +7,9 @@ class ResumeContent extends Component {
     return (
 
       <div className="container">
-        <div className="row resume">
+        <div className="row">
 
-          <div className="col-sm-8 col-xs-12">
+          <div className="col-sm-8 col-xs-12 resume">
           	<h1 className="resume">Full-Stack Software Engineer</h1>
 	    			<h2>Summary</h2>
 	    			<p>

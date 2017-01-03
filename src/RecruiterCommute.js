@@ -27,8 +27,6 @@ const CommuteMap = withGoogleMap(props => (
             {lng:-97.30814, lat:32.6698},
             {lng:-97.32055, lat:32.67741},
             {lng:-97.3887, lat:32.71661},
-            {lng:-97.3989, lat:32.73319},
-            {lng:-97.39931, lat:32.73337},
             {lng:-97.33038, lat:32.7549},
             {lng:-97.39031, lat:32.82438},
             {lng:-97.36394, lat:32.86023},
@@ -92,7 +90,7 @@ const CommuteMap = withGoogleMap(props => (
         visible={true}
         options={{
           fillColor: `yellow`,
-          fillOpacity: 0.30,
+          fillOpacity: 0.15,
           strokeColor: `yellow`,
           strokeOpacity: 1,
           strokeWeight: 1,

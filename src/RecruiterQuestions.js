@@ -9,11 +9,11 @@ var questions = [
   },
   {
     question: "Are you willing to relocate?",
-    answer: "I have grown roots in the Dallas/Fort Worth metroplex and will not move my family.  I am not interested in opportunities that involve relocation at this time."
+    answer: "I have grown roots in the Dallas/Fort Worth metroplex and will not move my family.  Relocation is not a requirement I can meet at this time."
   },
   {
     question: "Will you travel for work?",
-    answer: "Occasional travel for team building or co-located sites will not be a problem.  Weekly travel for work is not acceptable for my family's needs."
+    answer: "Occasional travel for team building or co-located sites will not be a problem.  Required weekly travel is not a requirement I can meet at this time."
   },
   {
     question: "What is your compensation range?",
@@ -21,11 +21,11 @@ var questions = [
   },
   { 
     question: "Are you willing to telecommute?",
-    answer: "After working from home for several years, I've determined I prefer having an office with face-to-face interactions.  I am not interested in telecommute positions at this time.  "
+    answer: "After working from home for several years, I've determined I prefer having an office with face-to-face interactions.  Full-time telecommuting is not a requirement I can meet at this time."
   },
   {
     question:"What perks interest you?",
-    answer: "Strong benefits offering with excellent health care, FSA, DCA, vision, and education reimbursement such as Lynda.com or Safari Online.  Option to occasionally work from home.  On-site gym or fitness center.  Core schedule with no production support requirements (no after-hours).  "
+    answer: "Strong benefits offering with excellent health care, FSA, DCA, vision, and education reimbursement such as Lynda.com or Safari Online.  Option to occasionally work from home.  On-site gym or fitness center.  Core schedule with no production support requirements (no after-hours)."
   },
   {
     question:"What job title's interest you?",

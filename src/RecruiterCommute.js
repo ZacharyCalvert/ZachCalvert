@@ -48,7 +48,7 @@ const CommuteMap = withGoogleMap(props => (
         visible={true}
         options={{
           fillColor: `green`,
-          fillOpacity: 0.20,
+          fillOpacity: 0.25,
           strokeColor: `green`,
           strokeOpacity: 1,
           strokeWeight: 1,
@@ -89,9 +89,9 @@ const CommuteMap = withGoogleMap(props => (
         editable={false}
         visible={true}
         options={{
-          fillColor: `yellow`,
-          fillOpacity: 0.15,
-          strokeColor: `yellow`,
+          fillColor: `orange`,
+          fillOpacity: 0.25,
+          strokeColor: `orange`,
           strokeOpacity: 1,
           strokeWeight: 1,
         }}

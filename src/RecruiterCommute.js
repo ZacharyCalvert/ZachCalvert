@@ -126,6 +126,10 @@ state = {
 
   handleMapLoad(reactMap) {
 
+    if (!reactMap) {
+      return;
+    }
+
     /*
       Looks like there is an issue with using the SearchBox and Polygon.  I don't know the root cause and frankly
       don't have the NPM prowess of the 50 libraries in use in the react-google-maps script.  Instead, I've dug in and 

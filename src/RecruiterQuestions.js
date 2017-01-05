@@ -28,7 +28,7 @@ var questions = [
     answer: "Strong benefits offering with excellent health care, FSA, DCA, vision, and education reimbursement such as Lynda.com or Safari Online.  Option to occasionally work from home.  On-site gym or fitness center.  Core schedule with no production support requirements (no after-hours)."
   },
   {
-    question:"What job title's interest you?",
+    question:"What job titles interest you?",
     answer:"Software Architect, Principal Architect, DevOps Engineer, or Technical Lead."
   },
   {

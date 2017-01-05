@@ -6,6 +6,7 @@ import {
   Marker
 } from "react-google-maps";
 import _ from "lodash";
+import inside from "point-inside-polygon";
 
 // Polygon drive range based on
 // https://www.freemaptools.com/how-far-can-i-travel.htm
@@ -13,16 +14,8 @@ import _ from "lodash";
 // Google Maps React Utility Docs:
 // http://tomchentw.github.io/react-google-maps/
 
-const CommuteMap = withGoogleMap(props => (
-  <GoogleMap
-    ref={props.onMapLoad}
-    defaultZoom={10}
-    defaultCenter={{ lat: 32.802642, lng: -97.194859 }}
-  >
 
-    <Polygon
-        paths={
-          [
+const InnerCommutePolygon = [
             {lng:-97.23433, lat:32.61078},
             {lng:-97.27003, lat:32.62984},
             {lng:-97.30221, lat:32.65619},
@@ -43,23 +36,11 @@ const CommuteMap = withGoogleMap(props => (
             {lng:-97.02908, lat:32.75234},
             {lng:-97.17742, lat:32.67592},
             {lng:-97.184, lat:32.6443}
-            ]
-          }
-        draggable={false}
-        editable={false}
-        visible={true}
-        options={{
-          fillColor: `green`,
-          fillOpacity: 0.25,
-          strokeColor: `green`,
-          strokeOpacity: 1,
-          strokeWeight: 1,
-        }}
-      />
+            ];
 
-    <Polygon
-        paths={
-          [
+const FlatInnerCommutePolygon = InnerCommutePolygon.map(function(lngLat) {return [lngLat.lng, lngLat.lat];});
+
+const OuterCommutePolygon = [
             {lng:-97.32015, lat:32.60451},
             {lng:-97.41654, lat:32.65307},
             {lng:-97.43817, lat:32.68399},
@@ -85,7 +66,36 @@ const CommuteMap = withGoogleMap(props => (
             {lng:-97.02441, lat:32.68469},
             {lng:-97.10461, lat:32.67774},
             {lng:-97.13252, lat:32.58164}
-            ]
+            ];
+const FlatOuterCommutePolygon = OuterCommutePolygon.map(function(lngLat) {return [lngLat.lng, lngLat.lat];});
+
+
+const CommuteMap = withGoogleMap(props => (
+  <GoogleMap
+    ref={props.onMapLoad}
+    defaultZoom={10}
+    defaultCenter={{ lat: 32.802642, lng: -97.194859 }}
+  >
+
+    <Polygon
+        paths={
+          InnerCommutePolygon
+          }
+        draggable={false}
+        editable={false}
+        visible={true}
+        options={{
+          fillColor: `green`,
+          fillOpacity: 0.25,
+          strokeColor: `green`,
+          strokeOpacity: 1,
+          strokeWeight: 1,
+        }}
+      />
+
+    <Polygon
+        paths={
+          OuterCommutePolygon
           }
         draggable={false}
         editable={false}
@@ -99,7 +109,7 @@ const CommuteMap = withGoogleMap(props => (
         }}
       />
       {props.markers.map((marker, index) => (
-        <Marker position={marker.position} key={index} />
+        <Marker position={marker.position} key={index} options={marker.options}/>
       ))}
   </GoogleMap>
 ));
@@ -112,13 +122,14 @@ state = {
 
   handleMapLoad = this.handleMapLoad.bind(this);
   handleMarkersChanged = this.handleMarkersChanged.bind(this);
+  getMarkerIcon = this.getMarkerIcon.bind(this);
 
   handleMapLoad(reactMap) {
 
     /*
       Looks like there is an issue with using the SearchBox and Polygon.  I don't know the root cause and frankly
       don't have the NPM prowess of the 50 libraries in use in the react-google-maps script.  Instead, I've dug in and 
-      reverse engineered some of the guts and discovered how to ge the low level map.  I'll go directly to google
+      reverse engineered some of the guts and discovered how to get the low level map.  I'll go directly to google
       API and wire in the search box manually.  
 
       Ugly but functional - sometimes required, never fun.
@@ -133,6 +144,7 @@ state = {
     var google = window.google;
     var searchBox = new google.maps.places.SearchBox(inputDiv);
     searchBox.handleMarkersChanged = this.handleMarkersChanged;
+    searchBox.getMarkerIcon = this.getMarkerIcon;
     // cute naming convention guy.  Very professional.
     var map = reactMap.context["__SECRET_MAP_DO_NOT_USE_OR_YOU_WILL_BE_FIRED"];
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(inputDiv);
@@ -151,21 +163,30 @@ state = {
               return;
             }
 
-            if (place.geometry.viewport) {
-              // Only geocodes have viewport.
-              bounds.union(place.geometry.viewport);
-            } else {
+            if (place.geometry.location) {
               bounds.extend(place.geometry.location);
             }
           });
-          map.fitBounds(bounds);
+          map.panToBounds(bounds);
 
           // Add a marker for each place returned from search bar
           const markers = places.map(place => ({
             position: place.geometry.location,
+            options:{icon: searchBox.getMarkerIcon(place.geometry.location)}
           }));
           searchBox.handleMarkersChanged(markers);
         });
+  }
+
+  getMarkerIcon(location) {
+    var point = [location.lng(), location.lat()];
+    if (inside(point, FlatInnerCommutePolygon)) {
+      return "http://maps.google.com/mapfiles/ms/icons/green-dot.png";
+    }
+    if (inside(point, FlatOuterCommutePolygon)) {
+      return "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png";
+    }
+    return "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
   }
 
   handleMarkersChanged(updatedMarkers) {
@@ -181,7 +202,9 @@ state = {
         <div className="row">
           <div className="col-md-12 col-sm-12 col-xs-12">
             <p>
-              Below is the coverage of my maximum commute range.
+              Below is the coverage of my maximum commute range.  You may search for the office location in the google search box.
+              Office locations that are within my commute range will show up as green for nearby, yellow for extended commute, and red for 
+              out of my commute range.  
             </p>
           </div>
         </div>

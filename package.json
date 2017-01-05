@@ -6,6 +6,7 @@
     "bootstrap": "^3.3.7",
     "google": "^2.1.0",
     "jquery": "^3.1.1",
+    "point-inside-polygon": "^1.0.3",
     "react": "^15.4.1",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",

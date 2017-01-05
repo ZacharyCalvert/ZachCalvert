@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   withGoogleMap,
   GoogleMap,
-  Polygon
+  Polygon,
+  Marker
 } from "react-google-maps";
 import _ from "lodash";
 
@@ -14,6 +15,7 @@ import _ from "lodash";
 
 const CommuteMap = withGoogleMap(props => (
   <GoogleMap
+    ref={props.onMapLoad}
     defaultZoom={10}
     defaultCenter={{ lat: 32.802642, lng: -97.194859 }}
   >
@@ -96,18 +98,80 @@ const CommuteMap = withGoogleMap(props => (
           strokeWeight: 1,
         }}
       />
+      {props.markers.map((marker, index) => (
+        <Marker position={marker.position} key={index} />
+      ))}
   </GoogleMap>
 ));
 
 class RecruiterCommute extends Component {
 
 state = {
+  markers: []
   };
 
   handleMapLoad = this.handleMapLoad.bind(this);
+  handleMarkersChanged = this.handleMarkersChanged.bind(this);
 
-  handleMapLoad(map) {
-    this._mapComponent = map;
+  handleMapLoad(reactMap) {
+
+    /*
+      Looks like there is an issue with using the SearchBox and Polygon.  I don't know the root cause and frankly
+      don't have the NPM prowess of the 50 libraries in use in the react-google-maps script.  Instead, I've dug in and 
+      reverse engineered some of the guts and discovered how to ge the low level map.  I'll go directly to google
+      API and wire in the search box manually.  
+
+      Ugly but functional - sometimes required, never fun.
+
+      URLs tied together:
+      http://tomchentw.github.io/react-google-maps/places/search-box
+      https://developers.google.com/maps/documentation/javascript/examples/places-searchbox
+
+    */
+    this._map = reactMap;
+    var inputDiv = document.getElementById('office-search');
+    var google = window.google;
+    var searchBox = new google.maps.places.SearchBox(inputDiv);
+    searchBox.handleMarkersChanged = this.handleMarkersChanged;
+    // cute naming convention guy.  Very professional.
+    var map = reactMap.context["__SECRET_MAP_DO_NOT_USE_OR_YOU_WILL_BE_FIRED"];
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(inputDiv);
+
+    searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length === 0) {
+            return;
+          }
+
+          // For each place, get the icon, name and location.
+          var bounds = map.getBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              return;
+            }
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+
+          // Add a marker for each place returned from search bar
+          const markers = places.map(place => ({
+            position: place.geometry.location,
+          }));
+          searchBox.handleMarkersChanged(markers);
+        });
+  }
+
+  handleMarkersChanged(updatedMarkers) {
+    this.setState({
+      markers: updatedMarkers
+    });
   }
 
   render() {
@@ -124,6 +188,7 @@ state = {
       	
       	<div className="row">
           <div className="col-md-12 col-sm-12 col-xs-12">
+            <input id="office-search" className="controls" type="text" placeholder="Office location search"/>
             <CommuteMap
               containerElement={
                 <div style={{ height: `400px` }} />
@@ -132,6 +197,7 @@ state = {
                 <div style={{ height: `400px` }} />
               }
               onMapLoad={this.handleMapLoad}
+              markers={this.state.markers}
             />
         </div>
       	</div>

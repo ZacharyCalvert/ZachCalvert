@@ -41,7 +41,7 @@ var references = [
 		title: "Systems Administration Manager", 
 		company: "XpressDocs", 
 		linkedIn: "https://www.linkedin.com/in/chrisrow",
-		text: "I worked with Chris at XpressDocs designing our CI/CD pipeline with as Senior Software Engineer.", 
+		text: "I worked with Chris at XpressDocs designing our CI/CD pipeline as Senior Software Engineer.", 
 		type: "profile"
 	},
 	{

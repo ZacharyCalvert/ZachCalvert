@@ -16,7 +16,7 @@ class AboutMe extends Component {
             </p>
 
             <ul className="about-me-links">
-              <li><a href="https://www.linkedin.com/in/zachary-calvert" target="_blank">LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/in/zachcalvert" target="_blank">LinkedIn</a></li>
               <li><a href="https://github.com/ZacharyCalvert" target="_blank">GitHub</a></li>
               <li><a href="mailto:Zach&#67;alvert&#64;gmail.com" target="_blank">GMail</a></li>
               <li><a href="https://twitter.com/zacharycalvert" target="_blank">@Twitter</a></li>

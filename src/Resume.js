@@ -1,30 +1,27 @@
 import React, { Component } from 'react';
 import ResumeContent from './ResumeContent';
 import ResumeDownloads from './ResumeDownloads';
-import ResumeRoles from './ResumeRoles';
 import ResumeSkills from './ResumeSkills';
+import ResumeReferences from './ResumeReferences';
 import SubNav from './SubNav';
+import './style/resume.css';
 
 var subNavEntries = [
   {
-    page: 'resume-bio',
-    text: 'Bio', 
-    href: '#resume-bio'
+    page: 'bio',
+    text: 'Bio'
   },
   {
-    page: 'resume-downloads',
-    text: 'Downloads',
-    href: '#resume-downloads'
+    page: 'downloads',
+    text: 'Download'
   },
   {
-    page: 'resume-skills',
-    text: 'Skills',
-    href: '#resume-skills'
+    page: 'references',
+    text: 'References'
   },
   {
-    page: 'resume-roles',
-    text: 'Roles',
-    href: '#resume-roles'
+    page: 'skills',
+    text: 'Skills'
   }
 ];
 
@@ -32,7 +29,7 @@ class Resume extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { selectedSubNav: "resume-bio" };
+    this.state = { selectedSubNav: "bio" };
     this.handleActionChange = this.handleActionChange.bind(this);
   }
 
@@ -43,15 +40,15 @@ class Resume extends Component {
   render() {
 
     var selection = this.state.selectedSubNav;
-    var toRender = (selection === "resume-roles" ? <ResumeRoles/>:
-      selection === "resume-downloads" ? <ResumeDownloads/> :
-      selection === "resume-skills" ? <ResumeSkills/> :
+    var toRender = (selection === "downloads" ? <ResumeDownloads/> :
+      selection === "references" ? <ResumeReferences/> :
+      selection === "skills" ? <ResumeSkills/> :
       <ResumeContent/> );
 
     return (
 
       <div>
-        <SubNav entries={subNavEntries} pageChanged={this.handleActionChange} selectedSubNav={this.state.selectedSubNav} />
+        <SubNav entries={subNavEntries} prefix='resume' pageChanged={this.handleActionChange} selectedSubNav={this.state.selectedSubNav} />
         {toRender}
       </div>
     );

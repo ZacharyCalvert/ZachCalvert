@@ -1,0 +1,70 @@
+
+
+.resume-button {
+  margin-bottom: 30px;
+  text-align:center;
+  border-radius: 27px;
+  background: #B9DC86;
+  cursor: pointer;
+  height: 100px;
+  padding: 40px;
+  box-shadow: 10px 10px 5px #888888;
+  white-space: nowrap;
+}
+
+.resume-button:hover {
+  box-shadow: 3px 3px 5px #888888;
+  background: #B9DC86;
+}
+
+a.resume-download {
+  display: none;
+}
+
+.resume * {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.resume h1 {
+  text-align: center;
+  font-size: 1.9em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.resume h2 {
+  margin-top: 8px;
+  font-size: 1.5em;
+}
+
+.resume h3 {
+  font-size: 1.1em;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.resume h4 {
+  font-size: 1.1em;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.resume h5 {
+  margin-left: 20px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+.resume p {
+  margin-left: 20px;
+}
+
+.position {
+  font-weight: normal;
+  font-style: normal;
+  margin-left: 10px;
+
+}

@@ -16,3 +16,7 @@ npm-debug.log
 
 # Resume with personal info
 public/resume
+
+# Sublime
+*.sublime-workspace
+*.sublime-project

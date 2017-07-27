@@ -1,0 +1,68 @@
+
+div.cards { 
+	padding: 0;
+}
+
+div.card-wrapper {
+	padding: 15px;
+	height: 100%;
+}
+
+.card {
+    border-radius: 25px;
+  	box-shadow: 3px 3px 5px #888888;
+	color: #05100B;
+  	background: #B9DC86;
+	padding: 0;
+	margin: 0;
+
+	border-width: 10px;
+	border-color: #ffffff;
+	border-style: transparent;
+	height: 100%;
+ 	cursor: pointer;
+}
+
+.card hr {
+	padding: 0;
+	margin: 0;
+}
+
+.card h1 {
+	text-transform: uppercase;
+	width: auto;
+	text-align: center;
+  	font-size: 1.2em;
+  	padding: 10px 0 10px 0;
+  	margin: 0;
+}
+
+.card p {
+	margin-top: 6px;
+	padding: 10px;
+}
+
+.profile h4 {
+	width: auto;
+	text-align: center;
+  	font-size: 1em;
+  	padding: 10px 0 10px 0;
+  	margin: 0;
+}
+
+.profile h5 {
+  	padding: 4px 0 0 10px;
+  	margin: 0;
+}
+
+.profile a {
+  	padding: 4px 0 0 10px;
+  	margin: 0;
+}
+
+.profile p {
+  	padding: 4px 10px 10px 10px;
+  	margin: 0;
+
+}
+

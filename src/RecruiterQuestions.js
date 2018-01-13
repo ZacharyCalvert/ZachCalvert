@@ -17,7 +17,7 @@ var questions = [
   },
   {
     question: "What is your compensation range?",
-    answer: "For full-time salary, I'm looking for $130,000 plus benefits, PTO, and bonus.  For contracting, I am interested in $80/hour as W2, or corp-to-corp contracting through my company Hemera, Inc. at $150/hour."
+    answer: "For full-time salary, I'm looking for $145,000 plus benefits, PTO, and bonus.  For contracting, I am interested in $90/hour as W2, or corp-to-corp contracting through my company Hemera, Inc. at $150/hour."
   },
   { 
     question: "Are you willing to telecommute?",
@@ -29,7 +29,7 @@ var questions = [
   },
   {
     question:"What job titles interest you?",
-    answer:"Software Architect, Principal Architect, DevOps Engineer, or Technical Lead."
+    answer:"Enterprise Architect, Software Architect, Principal Architect, DevOps Engineer, or Technical Lead."
   },
   {
     question: "Could you describe your ideal job?", 

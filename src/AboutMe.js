@@ -11,8 +11,9 @@ class AboutMe extends Component {
             <h4>About Me</h4>
             <img role="presentation" className="about" src="./img/CroppedCircle.jpg"></img>
             <p className="about">
-            I'm a senior software engineer in Fort Worth, TX currently working on automotive telematics 
-            systems (ATS) for <a href="http://www.spireon.com/">Spireon, Inc.</a>
+              I'm an enterprise architect employed by <a href="https://www.hcltech.com">HCL </a>
+              in <nobr>Fort Worth, TX</nobr> providing
+              engineering leadership to the <nobr><a name="https://www.bnsf.com/">BNSF Platform Team</a></nobr>.
             </p>
 
             <ul className="about-me-links">

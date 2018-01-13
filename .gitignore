@@ -20,3 +20,5 @@ public/resume
 # Sublime
 *.sublime-workspace
 *.sublime-project
+
+.idea

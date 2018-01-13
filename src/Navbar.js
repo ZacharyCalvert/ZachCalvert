@@ -34,7 +34,7 @@ class Nav extends Component {
               <li className={this.props.selectedPage === "HOME" ? 'active' : 'deactive'} onClick={() => this.updateSelection('HOME')} ><a href="#home">Home</a></li>
               <li className={this.props.selectedPage === "RESUME" ? 'active' : 'deactive'} onClick={() => this.updateSelection('RESUME')} ><a href="#resume">Resume</a></li>
               <li className={this.props.selectedPage === "RECRUITERS" ? 'active' : 'deactive'} onClick={() => this.updateSelection('RECRUITERS')} ><a href="#recruiters">Recruiters</a></li>
-            </ul>
+              </ul>
           </div>
         </div>
       </nav>

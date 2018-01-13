@@ -10,7 +10,7 @@ class ResumeContent extends Component {
         <div className="row">
 
           <div className="col-sm-8 col-xs-12 resume">
-          	<h1 className="resume">Full-Stack Software Engineer</h1>
+          	<h1 className="resume">Full-Stack Software Architect</h1>
 	    			<h2>Summary</h2>
 	    			<p>
 	    				Skilled Software Engineer with 12 years industry experience focused in full-stack development using primarily Java technologies. Professional experience in Agile methodologies, Continuous Integration, RESTful services, Atlassian utilities, unit testing, performance testing, Linux server diagnostics, cloud server virtualization, and requirement analysis.
@@ -74,8 +74,26 @@ class ResumeContent extends Component {
 	    			</p>
 
 	    			<h2>Experience</h2>
+						<h3>HCL - Fort Worth, TX</h3>
+						<h4>February, 2017 - Current</h4>
+						<h4>Enterprise Architect</h4>
+						<p className="position">
+							Joined HCL to provide enterprise architecture vision and technical leadership on-site at BNSF.
+						</p>
+						<h5>Monitoring Solutions - 3 Months, Agile Project</h5>
+						<p>
+							Developed minimum viable product definitions for monitoring solutions for the BNSF modernization platform.  Provided integration services, API evaluations and performance validating implementations for determining best fit monitoring solution.
+						</p>
+						<h5>JWT Integration - 3 Months, Agile Project</h5>
+						<p>
+							Developed Spring Boot starter libraries integrating with existing BNSF infrastructure to centralize identity management.  Developed a transition path for existing JSP applications and legacy services.
+						</p>
+						<h5>IBM Blue Mix - 3 Months, Agile Project</h5>
+						<p>
+							Provided evaluation and adoption guidance for integrating development pipelines to BlueMix, relying on the Cloud Foundry APIs and command line services.
+						</p>
 	    			<h3>Spireon - Irving, TX</h3>
-	    			<h4>July, 2016 - Current</h4>
+	    			<h4>July 2016 - February 2017</h4>
 	    			<h4>Senior Software Engineer</h4>
 	    			<p className="position">
 							Joined a Spring Boot Microservice REST API software team developing, testing, and reviewing security for services deployed on Amazon AWS as a Senior Software Engineer. 

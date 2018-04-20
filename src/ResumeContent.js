@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AboutMe from './AboutMe';
+import Education from './Education';
 
 class ResumeContent extends Component {
 
@@ -13,58 +14,58 @@ class ResumeContent extends Component {
           	<h1 className="resume">Full-Stack Software Architect</h1>
 	    			<h2>Summary</h2>
 	    			<p>
-	    				Skilled Software Engineer with 12 years industry experience focused in full-stack development using primarily Java technologies. Professional experience in Agile methodologies, Continuous Integration, RESTful services, Atlassian utilities, unit testing, performance testing, Linux server diagnostics, cloud server virtualization, and requirement analysis.
+	    				Skilled Software Engineer with 13 years industry experience focused in full-stack development using primarily Java technologies. Professional experience in Agile methodologies, Continuous Integration, RESTful services, Atlassian utilities, unit testing, performance testing, Linux server diagnostics, cloud server virtualization, and requirement analysis.
 	    			</p>
 	    			<h2>Proficiencies</h2>
-	    			<h4>Java - 12 years</h4>
+	    			<h4>Java - 13 years</h4>
 	    			<p>
 							Spring, Spring Boot, Ehcache, Hibernate, OSGi, JUnit, CXF, JDBC, ServiceMix, Maven, JMockit, Camel, Groovy, Gradle, Spock 
 	    			</p>
-	    			<h4>Atlassian Development Utilities - 7 years</h4>
+						<h4>NoSQL - 4 years</h4>
+						<p>
+							Amazon DynamoDB, MongoDB, Redis, Cassandra
+						</p>
+	    			<h4>Atlassian Development Utilities - 8 years</h4>
 	    			<p>
 							BitBucket, Jira, Bamboo, Confluence, FishEye
 	    			</p>
 						<h4>Message Queuing Systems - 5 years</h4>
 	    			<p>
-							RabbitMQ, ActiveMQ, Tibco
+							Kafka, RabbitMQ, ActiveMQ, Tibco
 	    			</p>
 						<h4>SQL - 12 years</h4>
 	    			<p>
 							Oracle, MySQL, PostgreSQL, MS SQL Server
 	    			</p>
-						<h4>Continuous Integration - 5 years</h4>
+						<h4>Continuous Integration - 8 years</h4>
 	    			<p>
 							Jenkins, Bamboo, Hudson, Automated Deployment
 	    			</p>
-						<h4>NoSQL - 2 years</h4>
+						<h4>Virtualization - 6 years</h4>
 	    			<p>
-							MongoDB, Redis, Cassandra
+							Amazon Lambda, Amazon EC2, Heroku, Docker, Ansible, Vagrant, VirtualBox, VMware vCloud
 	    			</p>
-						<h4>Virtualization - 4 years</h4>
-	    			<p>
-							Amazon EC2, Heroku, Docker, Ansible, Vagrant, VirtualBox, VMware vCloud
-	    			</p>
-						<h4>Linux - 5 years</h4>
+						<h4>Linux - 8 years</h4>
 	    			<p>
 							Server management, bash scripting, installation, performance monitoring
 	    			</p>
-						<h4>Development Toolkits - 12 years</h4>
+						<h4>Development Toolkits - 13 years</h4>
 	    			<p>
 							Git, IntelliJ, Eclipse, Subversion, Ant, SecureCRT, Babun, Cygwin
 	    			</p>
-						<h4>Front-End Web - 3 years</h4>
+						<h4>Front-End Web - 5 years</h4>
 	    			<p>
-							ReactJS, Bootstrap 3, Angular 2, Jasmine, JQuery, Javascript, HTML 5, CSS
+							ReactJS, Bootstrap 3, Jasmine, JQuery, Javascript, HTML 5, CSS
 	    			</p>
-						<h4>Security Mitigation - 8 years</h4>
+						<h4>Security Mitigation - 9 years</h4>
 	    			<p>
-							SSL, WireShark, salted hashing/encryption, firewall configuration
+							TLS/SSL, WireShark, salted hashing/encryption, firewall configuration
 	    			</p>
 						<h4>Server Clustering, Scaling, and Disaster Recovery - 8 years</h4>
 	    			<p>
 							REST-based cloud scaling, Geo-redundancy, recovery analysis
 	    			</p>
-						<h4>Performance Testing - 5 years</h4>
+						<h4>Performance Testing - 7 years</h4>
 	    			<p>
 							JMeter, Artillery, Thread Dump Analyzer, Garbage Collection Viewer, JConsole 
 	    			</p>
@@ -76,13 +77,17 @@ class ResumeContent extends Component {
 	    			<h2>Experience</h2>
 						<h3>HCL - Fort Worth, TX</h3>
 						<h4>February, 2017 - Current</h4>
-						<h4>Enterprise Architect</h4>
+						<h4>Enterprise Cloud Architect</h4>
 						<p className="position">
 							Joined HCL to provide enterprise architecture vision and technical leadership on-site at BNSF.
 						</p>
-						<h5>Monitoring Solutions - 3 Months, Agile Project</h5>
+						<h5>OpenShift - 3 Months, Agile Project</h5>
 						<p>
-							Developed minimum viable product definitions for monitoring solutions for the BNSF modernization platform.  Provided integration services, API evaluations and performance validating implementations for determining best fit monitoring solution.
+							Responsible for working with DevOps team for vision for application development and deployment as container services.  Developed IaaS service to integrate existing TLS issuance services and Remedy workflows to offer certificate automation for new containers.  Supporting moving towards full automation for application build to scaled image deployment.
+						</p>
+						<h5>OpenShift Monitoring Solutions - 3 Months, Agile Project</h5>
+						<p>
+							Developed minimum viable product definitions for monitoring solutions for the BNSF modernization platform.  Provided integration services, API evaluations and performance validating implementations for determining best fit monitoring solution for OpenShift.  Particularly focused on Kubernetes Daemonset solutions, offering full visibility on outages and root cause analysis.
 						</p>
 						<h5>JWT Integration - 3 Months, Agile Project</h5>
 						<p>
@@ -170,12 +175,7 @@ class ResumeContent extends Component {
 						<p>
 							Developed a flood research application integrating many different data providers into an Eclipse RCP (OSGi) based application.  Provided map synchronization and various research and geospatial toolsets to achieve pinpoint accuracy for floodplain identification.
 						</p>
-						<h2>Education</h2>
-						<h3>University of Texas at Arlington</h3>
-						<h4>summa cum laude</h4>
-						<p>
-							Graduated summa cum laude with a Bachelor of Science focusing in breadth of languages ranging from C, C++, Java, Lisp, Prolog, and SQL.
-						</p>
+						<Education/>
 	      	</div>
 
 				<AboutMe/>

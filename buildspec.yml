@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies started on `date`
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build
+  tarball:
+    commands: 
+      - tar -czf zachcalvert.tgz -C build . 
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - zachcalvert.tgz 

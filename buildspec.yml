@@ -9,8 +9,6 @@ phases:
     commands:
       - echo Build started on `date`
       - npm run build
-  tarball:
-    commands: 
       - tar -czf zachcalvert.tgz -C build . 
   post_build:
     commands:

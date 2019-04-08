@@ -10,6 +10,11 @@
     <title>Meet Zach Calvert</title>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW6shSgAxet9a0CkSEDcViKVDGHAdPuIQ&libraries=places"></script>
+    <script>
+     if (location.protocol != 'https:') {
+       location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+     }
+    </script>
   </head>
   <body>
     <div id="react-root"></div>

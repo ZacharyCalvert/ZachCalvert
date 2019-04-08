@@ -11,9 +11,9 @@ class AboutMe extends Component {
             <h4>About Me</h4>
             <img role="presentation" className="about" src="./img/CroppedCircle.jpg"></img>
             <p className="about">
-              I'm an enterprise architect employed by <a href="https://www.hcltech.com">HCL </a>
+              I'm an Enterprise Cloud Architect employed by <a href="https://www.hcltech.com">HCL </a> 
               in <nobr>Fort Worth, TX</nobr> providing
-              engineering leadership to the <nobr><a name="https://www.bnsf.com/">BNSF Platform Team</a></nobr>.
+              engineering leadership to the <a href="https://www.bnsf.com/">BNSF</a> Platform Team.
             </p>
 
             <ul className="about-me-links">
